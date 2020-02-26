@@ -167,3 +167,19 @@ mkvirtualenv py3 -p python3
 
 
 workon py3
+
+
+
+windows 安装  face_recognition
+
+基于anaconda
+
+anaconda shell里面：
+
+conda install cmake
+
+conda install dlib
+
+conda install face_recognition_models
+
+conda install face_recogniton
