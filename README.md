@@ -54,28 +54,49 @@ cd ./dlib
 sudo python3 setup.py install --compiler-flags "-mfpu=neon"
 会很慢要等一会
 
+
+
+安装face_recogniiton的训练集：
+
+sudo pip3 install face_recognition_models
+
+
+
 安装face_recognition：
 
 sudo pip3 install face_recognition
 
+
+
 pip下载太慢的时候，直接去镜像网站下tar.gz 压缩包或者whl文件安装：
+
 
 pip3 setup.py install(tar.gz解压后在文档目录下)
 
 pip3 install xxxxxx.whl (给whl用，也要在文档目录下)
+
+
+
+
 
 Opencv的安装  ：
 
 各种相关的依赖包：
 
 升级更新软件包：
+
+
 sudo apt-get update 
 sudo apt-get upgrade
 
 安装图像I/O包：
+
+
 sudo apt-get install libjpeg-dev libtiff5-dev libjasper-dev libpng-dev
 
 安装视频I/O包，方便获取 视频流：
+
+
 sudo apt-get install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev
 sudo apt-get install libxvidcore-dev libx264-dev
 
@@ -87,37 +108,62 @@ sudo apt-get install libgtk2.0-dev libgtk-3-dev
 
 
 安装一些额外项来优化opencv许多内部操作（如矩阵操作）：
+
+
 sudo apt-get install libatlas-base-dev gfortran
 
 
 安装适用于HDF5数据集和Qt GUI：
+
+
 sudo apt-get install libhdf5-dev libhdf5-serial-dev libhdf5-103
 sudo apt-get install libqtgui4 libqtwebkit4 libqt4-test python3-pyqt5
+
+
+
 
 安装opencv：
 
 pip3 install opencv-contrib-python
+
 还是建议直接去镜像网站找到合适的安装包（树莓派4版本为 armhf或者 armv7）
+
 
 安装虚拟空间的包（类似于anaconda）：
 
 sudo pip3 install virtualenv virtualenvwrapper
 
+
 打开 ~/.bashrc 文件：
+
+
 sudo nano ~/.bashrc
 
 添加：
+
+
 #virtualenv and virtualenvwrapper
 export WORKON_HOME=$HOME/.virtualenvs
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 source /usr/local/bin/virtualenvwrapper.sh
+
 保存退出
 
+
 重新加载source一下bashrc：
+
+
 source ~/.bashrc
 
+
 Python 3 创建一个名为py3（可自己随便起）的Python虚拟环境：
+
+
 mkvirtualenv py3 -p python3
 
+
+
 激活py3环境：
+
+
 workon py3
