@@ -16,8 +16,11 @@ deb http://mirrors.tuna.tsinghua.edu.cn/raspberrypi/ buster main ui
 
 
 所需前提库的安装：
+
 sudo apt-get update
+
 sudo apt-get upgrade
+
 sudo apt-get install build-essential \
     cmake \
     gfortran \
@@ -39,19 +42,25 @@ sudo apt-get install build-essential \
     python3-numpy \
     python3-pip \
     zip
+    
 sudo apt-get clean
 
 picamera的更新：
 
 sudo apt-get install python3-picamera
+
 sudo pip3 install --upgrade picamera[array]
 
 下载安装dlib的‘19.7.0’版本适用于python3.7：
 
 mkdir -p dlib
+
 git clone -b 'v19.7' --single-branch https://github.com/davisking/dlib.git dlib/
+
 cd ./dlib
+
 sudo python3 setup.py install --compiler-flags "-mfpu=neon"
+
 会很慢要等一会
 
 
@@ -87,6 +96,7 @@ Opencv的安装  ：
 
 
 sudo apt-get update 
+
 sudo apt-get upgrade
 
 安装图像I/O包：
@@ -98,12 +108,15 @@ sudo apt-get install libjpeg-dev libtiff5-dev libjasper-dev libpng-dev
 
 
 sudo apt-get install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev
+
 sudo apt-get install libxvidcore-dev libx264-dev
 
 为编译 highgui模块，我们需要安装GTK开发库：
 
 sudo apt-get install libfontconfig1-dev libcairo2-dev
+
 sudo apt-get install libgdk-pixbuf2.0-dev libpango1.0-dev
+
 sudo apt-get install libgtk2.0-dev libgtk-3-dev
 
 
@@ -117,6 +130,7 @@ sudo apt-get install libatlas-base-dev gfortran
 
 
 sudo apt-get install libhdf5-dev libhdf5-serial-dev libhdf5-103
+
 sudo apt-get install libqtgui4 libqtwebkit4 libqt4-test python3-pyqt5
 
 
@@ -142,9 +156,13 @@ sudo nano ~/.bashrc
 添加：
 
 
+
 #virtualenv and virtualenvwrapper
+
 export WORKON_HOME=$HOME/.virtualenvs
+
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+
 source /usr/local/bin/virtualenvwrapper.sh
 
 保存退出
